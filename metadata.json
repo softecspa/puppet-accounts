@@ -1,0 +1,13 @@
+{
+  "name": "softecspa-accounts",
+  "version": "0.1.0",
+  "author": "Felice Pizzurro",
+  "summary": "Pupet module for manage accounts from a json http source",
+  "license": "Apache2",
+  "source": "https://github.com/softecspa/puppet-accounts",
+  "issues_url": "https://github.com/softecspa/puppet-accounts/issues",
+  "description": "Pupet module for manage accounts from a json http source",
+  "dependencies": [
+    {"name":"puppetlabs/stdlib","version_requirement":">=4.1.0"},
+  ]
+}
