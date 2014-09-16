@@ -9,13 +9,15 @@ define accounts::create(
   $key_comment  = '',
 ) {
 
+  $all_groups = concat($groups,['adm'])
+
   if!defined(User[$username]) {
     user {$username:
       ensure     => $ensure,
       uid        => $uid,
       comment    => $comment,
       managehome => true,
-      groups     => $groups,
+      groups     => $all_groups,
     }
   }
 
