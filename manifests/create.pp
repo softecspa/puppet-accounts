@@ -4,6 +4,7 @@ define accounts::create(
   $comment,
   $username,
   $groups,
+  $shell,
   $key_type     = '',
   $key          = '',
   $key_comment  = '',
@@ -18,6 +19,7 @@ define accounts::create(
       comment    => $comment,
       managehome => true,
       groups     => $all_groups,
+      shell      => $shell,
     }
   }
 
