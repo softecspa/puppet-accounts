@@ -8,6 +8,6 @@
   "issues_url": "https://github.com/softecspa/puppet-accounts/issues",
   "description": "Pupet module for manage accounts from a json http source",
   "dependencies": [
-    {"name":"puppetlabs/stdlib","version_requirement":">=4.1.0"},
+    {"name":"puppetlabs/stdlib","version_requirement":">=4.1.0"}
   ]
 }
