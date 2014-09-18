@@ -10,7 +10,7 @@ define accounts::create(
   $key_comment  = '',
 ) {
 
-  $all_groups = concat($groups,['adm'])
+  $all_groups = concat($groups,['adm','users'])
 
   if!defined(User[$username]) {
     user {$username:
