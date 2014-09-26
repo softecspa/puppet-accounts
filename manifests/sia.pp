@@ -7,7 +7,7 @@ define accounts::sia(
 ) {
 
   validate_array($groups)
-  validate_re($cms_id, '[a-zA-Z]{2}-[1-9]{2}[1-9]{4}', 'Cms id should match pattern aa-nn-nnnn')
+  validate_re($cms_id, '[a-zA-Z]{2}-[0-9]{2}-[0-9]{4}', 'Cms id should match pattern aa-nn-nnnn')
   if ! is_domain_name($query_host) {
     fail("The query_host seems not a valid domain name: ${query_host}.")
   }
