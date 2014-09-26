@@ -11,9 +11,6 @@ define accounts::user(
 ) {
 
   if !defined(User[$username]) {
-  $real_groups = concat($groups,['adm','users'])
-
-  if !defined(User[$username]) {
     user {$username:
       ensure     => $ensure,
       uid        => $uid,
@@ -34,5 +31,4 @@ define accounts::user(
       }
     }
   }
-
 }
