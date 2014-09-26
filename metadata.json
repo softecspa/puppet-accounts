@@ -1,6 +1,6 @@
 {
   "name": "softecspa-accounts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Felice Pizzurro",
   "summary": "Pupet module for manage accounts from a json http source",
   "license": "Apache2",

@@ -1,32 +1,25 @@
-define accounts::create(
+define accounts::user(
   $ensure,
   $uid,
   $comment,
   $username,
-  $groups,
-  $shell,
+  $groups       = [ 'users' ],
+  $shell        = '/bin/bash',
   $key_type     = '',
   $key          = '',
   $key_comment  = '',
 ) {
 
-<<<<<<< Updated upstream:manifests/create.pp
-  $all_groups = concat($groups,['adm','users'])
-
-  if!defined(User[$username]) {
-=======
   if !defined(User[$username]) {
->>>>>>> Stashed changes:manifests/user.pp
+  $real_groups = concat($groups,['adm','users'])
+
+  if !defined(User[$username]) {
     user {$username:
       ensure     => $ensure,
       uid        => $uid,
       comment    => $comment,
       managehome => true,
-<<<<<<< Updated upstream:manifests/create.pp
-      groups     => $all_groups,
-=======
       groups     => $groups,
->>>>>>> Stashed changes:manifests/user.pp
       shell      => $shell,
       require    => Group[$groups],
     }
